@@ -19,3 +19,15 @@
 (setq auto-save-default 0)
 (desktop-save-mode t)
 (global-font-lock-mode 1)
+;;=======================
+;;open global ede mode
+;;=======================
+(global-ede-mode t)
+;;===================
+;;global key bingding
+;;==================
+;(define-key global-map (kbd "C-RET") 'set-mark-command)
+;(define-key global-map (kbd "M-RET") 'mark-word)
+;; remind kbd < and else diffrent
+(global-set-key (kbd "M-RET") 'mark-word)
+(global-set-key (kbd "<C-return>") 'set-mark-command)
