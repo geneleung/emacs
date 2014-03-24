@@ -1,2 +1,5 @@
 auto-save-list/
 *.DS_Store
+.emacs.desktop
+.emacs.desktop.lock
+ac-comphist.dat
