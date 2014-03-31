@@ -7,7 +7,8 @@
 (load "ctab.el")
 (load "sr-speedbar.el")
 (load "cc-mode-config.el")
-(load "auto-complete-clang.el")
+;; (load "auto-complete-clang.el")
+(load "init-eclim.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
