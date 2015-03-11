@@ -6,7 +6,7 @@
 (tool-bar-mode 1)
 (global-linum-mode 1)
 (column-number-mode 1)
-(global-ede-mode 1)
+;(global-ede-mode 1)
 
 ;(display-time-mode t)
 ;(setq display-time-24hr-format t)
@@ -22,7 +22,7 @@
 ;;=======================
 ;;open global ede mode
 ;;=======================
-(global-ede-mode t)
+;;(global-ede-mode t)
 ;;===================
 ;;global key bingding
 ;;==================
