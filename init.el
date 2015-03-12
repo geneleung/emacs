@@ -8,6 +8,8 @@
 (load "sr-speedbar.el")
 (load "cc-mode-config.el")
 (load "ztree.el")
+(load "psvn-config.el")
+(load "ediff-config.el")
 ;; (load "auto-complete-clang.el")
 ;;(load "init-eclim.el")
 (custom-set-variables
