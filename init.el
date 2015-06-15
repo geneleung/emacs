@@ -4,7 +4,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugin")
 ;; load config
 (load "base.el")
-(load "ctab.el")
+;;(load "ctab.el")
 ;;(load "sr-speedbar.el")
 (load "cc-mode-config.el")
 (load "ztree.el")

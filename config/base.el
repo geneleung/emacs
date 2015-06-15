@@ -3,7 +3,7 @@
 ;;=====================================
 ;;===emacs 24版nil无效，需要用0
 (menu-bar-mode -1);隐藏菜单栏
-;;(tool-bar-mode t)
+(tool-bar-mode -1)
 ;(global-linum-mode 1)
 ;(column-number-mode 1)
 ;(global-ede-mode 1)
