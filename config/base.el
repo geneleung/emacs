@@ -31,4 +31,15 @@
 ;; remind kbd < and else diffrent
 (global-set-key (kbd "M-RET") 'mark-word)
 (global-set-key (kbd "<C-return>") 'set-mark-command)
-(setq tags-table-list '("~/.emacs.d" "~/workspace/opensource/emacs-24.3/lisp"))
+
+(add-hook 'gtags-select-mode-hook     
+  '(lambda ()                         
+        (setq hl-line-face 'underline)
+        (hl-line-mode 1)              
+))                                    
+(add-hook 'java-mode-hook
+  '(lambda ()                         
+        (gtags-mode 1)))              
+; Customization                       
+(setq gtags-suggested-key-mapping t)  
+(setq gtags-auto-update t)            

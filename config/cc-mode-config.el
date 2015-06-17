@@ -1,5 +1,5 @@
 ;;=============代码折叠===============
-					;(hs-minor-mode t)
+;(hs-minor-mode t)
 (add-hook 'c-mode-common-hook 'hs-minor-mode) 
 (add-hook 'c++-mode-common-hook 'hs-headline) 
 ;;========注释
@@ -41,6 +41,6 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
   (local-set-key (kbd "`") 'skeleton-pair-insert-maybe)
   (local-set-key (kbd "[") 'skeleton-pair-insert-maybe)
   )
-(add-hook 'c-mode-common-hook 'my-c-cpp-mode-common-hook)
-(add-hook 'c++-mode-common-hook 'my-c-cpp-mode-common-hook)
+;;(add-hook 'c-mode-common-hook 'my-c-cpp-mode-common-hook)
+;; (add-hook 'c++-mode-common-hook 'my-c-cpp-mode-common-hook)
 ;;;end

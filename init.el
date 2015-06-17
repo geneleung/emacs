@@ -11,6 +11,7 @@
 (load "psvn-config.el")
 (load "ediff-config.el")
 (load "slime.el")
+(load "yasnippet-config.el")
 (autoload 'gtags-mode "gtags" "" t)
 ;; (load "auto-complete-clang.el")
 ;;(load "init-eclim.el")
