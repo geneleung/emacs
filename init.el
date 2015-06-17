@@ -8,7 +8,7 @@
 (load "ediff-config.el")
 (load "slime.el")
 (load "yasnippet-config.el")
-;; (load "auto-complete-config.el")
+(load "auto-complete-config.el")
 
 (autoload 'gtags-mode "gtags" "" t)
 
