@@ -8,7 +8,7 @@
 ;;(load "sr-speedbar.el")
 (load "cc-mode-config.el")
 (load "ztree.el")
-(load "psvn-config.el")
+;; (load "psvn-config.el")
 (load "ediff-config.el")
 (load "slime.el")
 (load "yasnippet-config.el")
