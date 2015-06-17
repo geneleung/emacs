@@ -1,3 +1,6 @@
 [submodule "plugin/yasnippet"]
 	path = plugin/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
+[submodule "plugin/android-mode"]
+	path = plugin/android-mode
+	url = https://github.com/remvee/android-mode.git
