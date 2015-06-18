@@ -9,6 +9,7 @@
 (load "slime.el")
 (load "yasnippet-config.el")
 (load "auto-complete-config.el")
+(load "android-config.el")
 
 (autoload 'gtags-mode "gtags" "" t)
 
