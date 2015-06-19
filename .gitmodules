@@ -4,3 +4,6 @@
 [submodule "plugin/android-mode"]
 	path = plugin/android-mode
 	url = https://github.com/remvee/android-mode.git
+[submodule "plugin/android"]
+	path = plugin/android
+	url = https://github.com/geneleung/android.git
