@@ -4,9 +4,3 @@
 [submodule "plugin/android"]
 	path = plugin/android
 	url = https://github.com/geneleung/android.git
-[submodule "plugin/solarized-theme"]
-	path = plugin/solarized-theme
-	url = https://github.com/bbatsov/solarized-emacs.git
-[submodule "plugin/dash"]
-	path = plugin/dash
-	url = https://github.com/magnars/dash.el.git
