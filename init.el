@@ -10,11 +10,9 @@
 (load "yasnippet-config.el")
 (load "auto-complete-config.el")
 (load "android-config.el")
+(load "gtags-config.el")
 ;; solarized theme is not as cofortable as it says,but misterioso is more better
 ;; (load "solarized-theme-config.el")
-
-(autoload 'gtags-mode "gtags" "" t)
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
