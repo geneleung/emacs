@@ -1,5 +1,6 @@
 auto-save-list/
 url/
+elpa/
 *.DS_Store
 .emacs.desktop
 .emacs.desktop.lock
