@@ -7,3 +7,6 @@
 [submodule "plugin/solarized-theme"]
 	path = plugin/solarized-theme
 	url = https://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "plugin/emacs-eclim"]
+	path = plugin/emacs-eclim
+	url = https://github.com/senny/emacs-eclim.git

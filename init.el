@@ -18,5 +18,4 @@
 ;; (load "android-config.el")
 ;; solarized theme is not as cofortable as it says,but misterioso is more better
 ;; (load "solarized-theme-config.el")
-
 ;; (autoload 'gtags-mode "gtags" "" t)
