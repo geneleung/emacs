@@ -10,3 +10,6 @@
 [submodule "plugin/emacs-eclim"]
 	path = plugin/emacs-eclim
 	url = https://github.com/senny/emacs-eclim.git
+[submodule "plugin/org-page"]
+	path = plugin/org-page
+	url = https://github.com/geneleung/org-page.git
