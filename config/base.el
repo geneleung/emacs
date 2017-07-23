@@ -19,6 +19,8 @@
 (setq auto-save-default 0)
 (desktop-save-mode t)
 (global-font-lock-mode 1)
+;; 设置自动换行
+(set-default 'truncate-lines t)
 ;;=======================
 ;;open global ede mode
 ;;=======================
