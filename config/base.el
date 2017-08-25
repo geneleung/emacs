@@ -21,6 +21,7 @@
 (global-font-lock-mode 1)
 ;; 设置自动换行
 (set-default 'truncate-lines t)
+(setq default-directory "~/")
 ;;=======================
 ;;open global ede mode
 ;;=======================
