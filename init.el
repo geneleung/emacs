@@ -1,9 +1,8 @@
 ;; liangzhen's emacs24 config
 (require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (define-obsolete-function-alias 'org-define-error 'define-error);;org-page编译时的错误处理
 ;;set defult loadpath
 (add-to-list 'load-path "~/.emacs.d/config")
@@ -19,6 +18,7 @@
 (load "yasnippet-config.el")
 (ac-config-default)
 (load "sr-speedbar-config.el")
+(load "plantuml.el")
 ;; (load "android-config.el")
 ;; solarized theme is not as cofortable as it says,but misterioso is more better
 ;; (load "solarized-theme-config.el")
@@ -32,7 +32,9 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (auto-complete simple-httpd org mustache htmlize git elisp-slime-nav))))
+    (plantuml-mode auto-complete simple-httpd org mustache htmlize git elisp-slime-nav)))
+ '(speedbar-show-unknown-files t)
+ '(sr-speedbar-auto-refresh nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

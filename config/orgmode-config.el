@@ -20,3 +20,11 @@
          "* %U\n %?\n  %i")
         ("T" "带文件链接的Todo" entry (file+headline "/home/liangzhen/personal/work-notes/capture.org" "Tasks")
              "* TODO %?\n  %i\n  %a")))
+(setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/libs/plantuml.1.2017.15.jar"))
+;; active Org-babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(;; other Babel languages
+   (plantuml . t)))
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
