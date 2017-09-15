@@ -26,5 +26,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(;; other Babel languages
+   (ditaa . t)
+   (dot . t)
    (plantuml . t)))
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
