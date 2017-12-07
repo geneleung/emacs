@@ -32,13 +32,13 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (plantuml-mode auto-complete simple-httpd org mustache htmlize git elisp-slime-nav)))
+    (plantuml-mode auto-complete elisp-slime-nav)))
  '(speedbar-show-unknown-files t)
  '(sr-speedbar-auto-refresh nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "YaHei Consolas Hybrid" :foundry "microsoft" :slant normal :weight normal :height 143 :width normal)))))
-;;(put 'narrow-to-region 'disabled nil)
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:family "YaHei Consolas Hybrid" :foundry "microsoft" :slant normal :weight normal :height 143 :width normal)))))
+;; ;;(put 'narrow-to-region 'disabled nil)
