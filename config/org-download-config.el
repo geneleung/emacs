@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/plugin")
+(require 'org-download)
+(setq org-download-screenshot-method "screencapture -i %s")
+(setq org-download-method 'attach)
+(setq org-download-screenshot-file "~/tmp/sreencapture.png")
