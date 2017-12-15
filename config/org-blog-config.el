@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/.emacs.d/plugin")
 (require 'ox-publish)
 (require 'htmlize)
 
