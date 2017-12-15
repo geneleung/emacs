@@ -1,4 +1,6 @@
 (require 'ox-publish)
+(require 'htmlize)
+
 (defun rename-current-buffer-with-first-line ()
   "用当前buffer的第一行内容重命名当前buffer和与他关联的文件
 如果第一行内容超过67个字符，自动截取前67个字符并补充...
@@ -29,45 +31,31 @@
           (set-buffer-modified-p nil)
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
-;;(global-set-key "\C-c\C-w" 'rename-current-buffer-with-first-line) 
-(add-hook 'org-mode-hook '(lambda ()
-                            ;; 取代系统的另存为
+
+(add-hook 'org-mode-hook '(lambda () ;;如果是在编辑org mode下，取代系统的另存为
                             (local-set-key (kbd "C-x C-w") 'rename-current-buffer-with-first-line)))
-;; (defun write-file-with-first-line ()
-;;   (interactive)
-;;   (write-file
-;;    (let ((title (string-trim
-;;                  (save-excursion
-;;                    (goto-char (point-min))
-;;                    (buffer-substring-no-properties (line-beginning-position) (line-end-position))))))
-;;      (if (> (length title) 67)
-;;          (concat (substring title 0 66) "...")
-;;        title))))
 
 (setq org-html-home/up-format
   "<div id=\"org-div-home-and-up\">
  <a accesskey=\"h\" href=\"%s\"> UP </a>
+|
  <a accesskey=\"H\" href=\"%s\"> HOME </a>
-<a accesskey=\"H\" href=\"RSS\"> RSS </a>
+|
+<a accesskey=\"H\" href=\"\"> RSS </a>
 </div>")
-;; (defcustom org-html-postamble-format
-;;   '(("en" "<p class=\"author\">Author: %a (%e)</p>
-;; <p class=\"date\">Date: %d</p>
-;; <p class=\"creator\">%c</p>
-;; <p class=\"validation\">%v</p>"))
       
 (setq org-publish-project-alist
       '(
         ("blog-notes"
-         :base-directory "~/personal/public-notes/"
+         :base-directory "~/personal/public-notes/"      ;;源文件目录
          :base-extension "org"
-         :publishing-directory "~/public_html/"
+         :publishing-directory "~/personal/public_html/" ;;生成文件目录
          :publishing-function org-html-publish-to-html
          :htmlized-source t ;; this enables htmlize, which means that I can use css for code!
          
-         :with-author t
+         :with-author nil
          :with-creator nil
-         :with-date t
+         :with-date nil
 
          :headline-level 4
          :recursive t
@@ -79,28 +67,30 @@
 
          ;; the following removes extra headers from HTML output -- important!
          :html-head nil ;; cleans up anything that would have been in there.
-         ;;:html-head-extra ,my-blog-extra-head
+         :html-head-extra "<link rel='stylesheet' href='res/code.css' />
+<link rel='stylesheet' href='res/main.css' />"
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-viewport nil
 
          ;;:html-format-drawer-function my-blog-org-export-format-drawer
-         :html-link-up "/index.html"
-         :html-link-home "/index.html"
+         :html-link-up "http://www.iknockdoor.com/"
+         :html-link-home "http://www.iknockdoor.com/"
 
          ;;:html-mathjax-options ,my-blog-local-mathjax
          ;;:html-mathjax-template "<script type=\"text/javascript\" src=\"%PATH\"></script>"
          :html-footnotes-section "<div id='footnotes'><!--%s-->%s</div>"
          ;;:html-preamble my-blog-header
          :html-postamble "<hr />
-<p><span style=\"float: left;\"><a href= \"/blog.xml\">RSS</a></span>
-License: <a href= \"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a></p>
-<p><a href= \"/contact.html\"> Contact</a></p>"
+<p>By Chappie 
+<a href=\"https://www.gnu.org/software/emacs/\">emacs 25.3.1</a>
+
+<a href=\"https://orgmode.org/\">org mode 8.2.10</a></p>"
 
          ;; sitemap - list of blog articles
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Blog"
+         :sitemap-title "笔记"
          ;; custom sitemap generator function
          ;;:sitemap-function my-blog-sitemap
          :sitemap-sort-files anti-chronologically
@@ -108,8 +98,8 @@ License: <a href= \"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4
          )
         ("blog-static"
          :base-directory "~/personal/public-notes/"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/public_html/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|xz"
+         :publishing-directory "~/personal/public_html/"
          :recursive t
          :publishing-function org-publish-attachment
          )
