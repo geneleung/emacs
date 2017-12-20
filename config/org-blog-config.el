@@ -35,7 +35,7 @@
 
 (add-hook 'org-mode-hook '(lambda () ;;如果是在编辑org mode下，取代系统的另存为
                             (local-set-key (kbd "C-x C-w") 'rename-current-buffer-with-first-line)))
-
+(setq org-html-htmlize-output-type 'css)
 (setq org-html-home/up-format
   "<div id=\"org-div-home-and-up\">
  <a accesskey=\"h\" href=\"%s\"> UP </a>
@@ -50,7 +50,7 @@
         ("blog-notes"
          :base-directory "~/personal/public-notes/"      ;;源文件目录
          :base-extension "org"
-         :publishing-directory "~/personal/public_html/" ;;生成文件目录
+         :publishing-directory "~/personal/public-html/" ;;生成文件目录
          :publishing-function org-html-publish-to-html
          :htmlized-source t ;; this enables htmlize, which means that I can use css for code!
          
@@ -68,8 +68,7 @@
 
          ;; the following removes extra headers from HTML output -- important!
          :html-head nil ;; cleans up anything that would have been in there.
-         :html-head-extra "<link rel='stylesheet' href='res/code.css' />
-<link rel='stylesheet' href='res/main.css' />"
+         :html-head-extra "<link rel='stylesheet' href='res/code.css' /><link rel='stylesheet' href='res/solarized-light.min.css' />"
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-viewport nil
@@ -100,7 +99,7 @@
         ("blog-static"
          :base-directory "~/personal/public-notes/"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|xz"
-         :publishing-directory "~/personal/public_html/"
+         :publishing-directory "~/personal/public-html/"
          :recursive t
          :publishing-function org-publish-attachment
          )
