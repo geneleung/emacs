@@ -68,8 +68,7 @@
 
          ;; the following removes extra headers from HTML output -- important!
          :html-head nil ;; cleans up anything that would have been in there.
-         :html-head-extra "<link rel='stylesheet' href='/res/code.css' />
-<link rel='stylesheet' href='/res/main.css' />"
+         :html-head-extra "<link rel='stylesheet' href='/res/code.css' /><link rel='stylesheet' href='/res/solarized-light.min.css' />"
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-viewport nil
