@@ -84,8 +84,16 @@
          :html-postamble "<hr />
 <p>By Chappie 
 <a href=\"https://www.gnu.org/software/emacs/\">emacs 25.3.1</a>
-
-<a href=\"https://orgmode.org/\">org mode 8.2.10</a></p>"
+<a href=\"https://orgmode.org/\">org mode 8.2.10</a></p>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-103057848-1', 'auto');
+        ga('send', 'pageview');
+</script>
+"
 
          ;; sitemap - list of blog articles
          :auto-sitemap t
