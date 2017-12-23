@@ -35,6 +35,7 @@
 
 (add-hook 'org-mode-hook '(lambda () ;;如果是在编辑org mode下，取代系统的另存为
                             (local-set-key (kbd "C-x C-w") 'rename-current-buffer-with-first-line)))
+(setq org-html-metadata-timestamp-format "") ;;生成的html文件不带注释的时间戳，每次重新生成时时间戳不同，导致会有一次版本控制的提交
 (setq org-html-htmlize-output-type 'css)
 (setq org-html-home/up-format
   "<div id=\"org-div-home-and-up\">
@@ -102,7 +103,11 @@
          ;; custom sitemap generator function
          ;;:sitemap-function my-blog-sitemap
          :sitemap-sort-files anti-chronologically
-         :sitemap-date-format "Published: %a %b %d %Y"
+         ;;下面两个要点
+         ;;1.format的字符串是生成到index.org，再生成，插入html标签可以按org语法转义
+         ;;2.%d的span一定要写在前面才能实现当前的效果
+         :sitemap-file-entry-format  "@@html:<span class='timestamp'>@@%d@@html:</span>@@ %t"
+         :sitemap-date-format "%Y-%m-%d"
          )
         ("blog-static"
          :base-directory "/var/git/public-notes-work-tree/"      ;;源文件目录
