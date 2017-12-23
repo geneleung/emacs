@@ -27,6 +27,8 @@
              "* TODO %?\n  %i\n  %a")))
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/libs/plantuml.1.2017.15.jar"))
+(setq org-ditaa-jar-path
+      (expand-file-name "~/.emacs.d/libs/ditaa0_9.jar"))
 ;; active Org-babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages
