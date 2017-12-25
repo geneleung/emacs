@@ -19,8 +19,8 @@
                            (save-excursion
                              (goto-char (point-min))
                              (buffer-substring-no-properties (line-beginning-position) (line-end-position))))))
-               (if (> (length title) 67)
-                   (concat (substring title 0 66) "...")
+               (if (> (length title) 10)
+                   (concat (substring title 0 9) "...")
                  title))
              ".org")
              ))
