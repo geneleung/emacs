@@ -29,6 +29,9 @@
       (expand-file-name "~/.emacs.d/libs/plantuml.1.2017.15.jar"))
 (setq org-ditaa-jar-path
       (expand-file-name "~/.emacs.d/libs/ditaa0_9.jar"))
+;; 太多取消的情况，所以给TODO都有一个取消的状态
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE(d)" "CANCELED(c)")))
 ;; active Org-babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages

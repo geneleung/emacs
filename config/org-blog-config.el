@@ -2,6 +2,20 @@
 (require 'ox-publish)
 (require 'htmlize)
 
+;; org导出html时换行不出现空格
+(defadvice org-html-paragraph (before org-html-paragraph-advice
+                                      (paragraph contents info) activate)
+  "Join consecutive Chinese lines into a single long line without
+unwanted space when exporting org-mode to html."
+  (let* ((origin-contents (ad-get-arg 1))
+         (fix-regexp "[[:multibyte:]]")
+         (fixed-contents
+          (replace-regexp-in-string
+           (concat
+            "\\(" fix-regexp "\\) *\n *\\(" fix-regexp "\\)") "\\1\\2" origin-contents)))
+
+    (ad-set-arg 1 fixed-contents)))
+
 (defun rename-current-buffer-with-first-line ()
   "用当前buffer的第一行内容重命名当前buffer和与他关联的文件
 如果第一行内容超过67个字符，自动截取前67个字符并补充...
