@@ -96,10 +96,11 @@ unwanted space when exporting org-mode to html."
          ;;:html-mathjax-template "<script type=\"text/javascript\" src=\"%PATH\"></script>"
          :html-footnotes-section "<div id='footnotes'><!--%s-->%s</div>"
          ;;:html-preamble my-blog-header
-         :html-postamble "<hr />
-<p>By Chappie 
-<a href=\"https://www.gnu.org/software/emacs/\">emacs 25.3.1</a>
-<a href=\"https://orgmode.org/\">org mode 8.2.10</a></p>
+         :html-postamble "
+<div id=\"org-div-home-and-up\">
+ <a href=\"/index.html\"> 返回目录 </a>
+</div>
+<p class=\"author\">by chappie (iknockdoor.com@gmail.com)</p>\n<p class=\"creator\">%c</p>
 <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
