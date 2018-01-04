@@ -7,6 +7,8 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 ;;(add-hook 'org-mode-hook 'turn-on-iimage-mode)
 (add-hook 'org-mode-hook 'org-toggle-inline-images)
+;; 设置org文件导出时不带上面那个目录
+(setq org-export-with-toc nil)
 ;;设置图片显示大小为70，同auto-fill mode
 (setq org-image-actual-width 600)
 ;;设置org时间戳用默认的英文格式
