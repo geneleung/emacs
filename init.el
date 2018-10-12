@@ -1,7 +1,7 @@
 ;; liangzhen's emacs24 config
 (require 'package)
 ;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 (define-obsolete-function-alias 'org-define-error 'define-error);;org-page编译时的错误处理
 ;;set defult loadpath
@@ -10,7 +10,7 @@
 (load "base.el")
 (load "orgmode-config.el")
 (load "elisp-slime-nav-config.el")
-(load "org-blog-config.el")
+;;(load "org-blog-config.el")
 ;;(load "org-page-config.el")
 ;; (load "cc-mode-config.el")
 ;; (load "ztree.el")
@@ -32,7 +32,9 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(indent-tabs-mode nil)
- '(package-selected-packages (quote (async plantuml-mode auto-complete elisp-slime-nav)))
+ '(package-selected-packages
+   (quote
+    (markdown-mode async plantuml-mode auto-complete elisp-slime-nav)))
  '(speedbar-show-unknown-files t)
  '(sr-speedbar-auto-refresh nil))
 ;; (custom-set-faces
