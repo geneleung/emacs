@@ -10,6 +10,7 @@
 (load "base.el")
 (load "orgmode-config.el")
 (load "elisp-slime-nav-config.el")
+(load "pelican-blog.el")
 ;;(load "org-blog-config.el")
 ;;(load "org-page-config.el")
 ;; (load "cc-mode-config.el")
