@@ -35,7 +35,7 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (markdown-mode async plantuml-mode auto-complete elisp-slime-nav)))
+    (htmlize markdown-mode async plantuml-mode auto-complete elisp-slime-nav)))
  '(speedbar-show-unknown-files t)
  '(sr-speedbar-auto-refresh nil))
 ;; (custom-set-faces
