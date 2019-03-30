@@ -2,7 +2,7 @@
 ;; 系统外观配置 begin
 ;;=====================================
 ;;===emacs 24版nil无效，需要用0
-(menu-bar-mode 0);隐藏菜单栏
+(menu-bar-mode 1);显示菜单栏
 (tool-bar-mode 0)
 ;(global-linum-mode 1)
 (column-number-mode 1)

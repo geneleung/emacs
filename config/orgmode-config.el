@@ -4,7 +4,11 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(add-hook 'org-mode-hook 'turn-on-auto-fill)
+(add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+(add-hook 'visual-fill-column-mode-hook #'visual-line-mode)
+(add-hook 'org-mode-hook 'turn-on-visual-line-mode)
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+;;(add-hook 'org-mode-hook 'turn-on-auto-fill)
 ;;(add-hook 'org-mode-hook 'turn-on-iimage-mode)
 (add-hook 'org-mode-hook 'org-toggle-inline-images)
 ;; 设置org文件导出时不带上面那个目录
@@ -16,18 +20,18 @@
 (setq org-log-done 'note)
 ;;设置状态改变记录，和修改日志放哪里，定义一个drawer
 (setq org-log-into-drawer "LOGBOOK")
-(setq org-agenda-files '("~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
-(setq org-default-notes-file "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/capture.org")
-(setq org-archive-location "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/archive::datetree/* From %s")
+(setq org-agenda-files '("~/capture.org"))
+(setq org-default-notes-file "~/capture.org")
+(setq org-archive-location "~/archive::datetree/* From %s")
 
 (setq org-tag-alist '(("工作" . ?w) ("技术" . ?t) ("个人" . ?p)))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/capture.org")
+      '(("t" "Todo" entry (file+headline "~/capture.org" "Tasks")
              "* TODO %?\n %U\n  %i")
-        ("n" "Note" entry (file+datetree "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/notes.org")
+        ("n" "Note" entry (file+headline "~/capture.org" "Notes")
          "* %U\n %?\n  %i")
-        ("T" "带文件链接的Todo" entry (file "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/capture.org")
+        ("T" "带文件链接的Todo" entry (file+headline "~/capture.org" "Tasks")
              "* TODO %?\n  %i\n  %a")))
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/libs/plantuml.1.2017.15.jar"))

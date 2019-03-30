@@ -23,6 +23,9 @@
 (load "org-download-config.el")
 (load "plantuml.el")
 (load "deft-config.el")
+(load "swiper-config.el")
+(setenv "PATH" "$PATH:/usr/local/bin" t)
+(add-to-list 'exec-path "/usr/local/bin")
 ;; (load "android-config.el")
 ;; solarized theme is not as cofortable as it says,but misterioso is more better
 ;; (load "solarized-theme-config.el")
@@ -36,7 +39,7 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (counsel ivy swiper deft htmlize markdown-mode async plantuml-mode auto-complete elisp-slime-nav)))
+    (visual-fill-column multi-term counsel ivy swiper deft htmlize markdown-mode async plantuml-mode auto-complete elisp-slime-nav)))
  '(speedbar-show-unknown-files t)
  '(sr-speedbar-auto-refresh nil))
 ;; (custom-set-faces

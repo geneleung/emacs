@@ -1,0 +1,5 @@
+;;(require 'deft)				
+(setq deft-extension "org")
+(setq deft-directory "~/personal")
+(setq deft-recursive t)
+(setq deft-use-filename-as-title t)
