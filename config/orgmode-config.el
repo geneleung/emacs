@@ -5,7 +5,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
-(add-hook 'visual-fill-column-mode-hook #'visual-line-mode)
+;;(add-hook 'visual-fill-column-mode-hook #'visual-line-mode)
 (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 ;;(add-hook 'org-mode-hook 'turn-on-auto-fill)
